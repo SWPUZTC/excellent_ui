@@ -1,0 +1,35 @@
+{
+  "eslint.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.lintTask.enable": false,
+  "eslint.codeAction.disableRuleComment": {
+    "enable": true,
+    "location": "separateLine"
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.onIgnoredFiles": "off",
+  "eslint.format.enable": true,
+  "editor.formatOnSave": false,
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
+  "tslint.enable": false,
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "less"
+  ]
+}
