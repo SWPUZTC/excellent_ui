@@ -1,30 +1,63 @@
 {
-  "name": "excellent_ui",
-  "version": "1.0.0",
-  "description": "通用组件库",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky",
-    "commit": "git-cz"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-git"
-    }
-  },
-  "author": "hsl",
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^9.34.0",
-    "commitizen": "^4.3.1",
-    "commitlint": "^19.8.1",
-    "cz-git": "^1.12.0",
-    "eslint": "^9.34.0",
-    "husky": "^9.1.7",
-    "stylelint": "^16.23.1",
-    "stylelint-config-standard-scss": "^15.0.1",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.42.0"
-  }
+    "name": "excellent_ui",
+    "version": "1.0.0",
+    "description": "通用组件库",
+    "main": "index.js",
+    "scripts": {
+        "prepare": "husky",
+        "commit": "git-cz",
+        "lint": "eslint \"{packages,apps}/**/*.{js,jsx,ts,tsx}\" --fix --cache",
+        "stylelint": "stylelint \"{packages,apps}/**/*.{css,scss,sass}\" --fix --cache",
+        "build": "turbo build",
+        "dev": "turbo dev --parallel",
+        "storybook": "turbo storybook"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-git"
+        }
+    },
+    "author": "hsl",
+    "license": "ISC",
+    "devDependencies": {
+        "@eslint/js": "^9.34.0",
+        "@types/react": "^19.1.12",
+        "@types/react-dom": "^19.1.9",
+        "commitizen": "^4.3.1",
+        "commitlint": "^19.8.1",
+        "cz-git": "^1.12.0",
+        "eslint": "^9.34.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.6",
+        "prettier": "^3.6.2",
+        "sass": "^1.92.0",
+        "stylelint": "^16.23.1",
+        "stylelint-config-standard-scss": "^15.0.1",
+        "tsup": "^8.5.0",
+        "turbo": "^2.5.6",
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.42.0"
+    },
+    "lint-staged": {
+        "*.{md,json}": [
+            "prettier --cache --write --no-error-on-unmatched-pattern"
+        ],
+        "*.{css,less}": [
+            "stylelint --fix",
+            "prettier --cache --write"
+        ],
+        "*.{js,jsx}": [
+            "eslint --fix",
+            "prettier --cache --write"
+        ],
+        "*.{ts,tsx}": [
+            "eslint --fix",
+            "prettier --cache --parser=typescript --write"
+        ]
+    },
+    "dependencies": {
+        "react": "^19.1.1",
+        "react-dom": "^19.1.1"
+    },
+    "packageManager": "pnpm@10.14.0"
 }
