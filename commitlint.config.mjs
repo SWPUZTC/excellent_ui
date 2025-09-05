@@ -1,9 +1,11 @@
 import { defineConfig } from "cz-git"
 
+/** @type {import('cz-git').UserConfig} */
 export default defineConfig({
     rules: {
         // @see: https://commitlint.js.org/#/reference-rules
     },
+    extends: ['@commitlint/config-conventional'],
     prompt: {
         alias: { fd: 'docs: fix typos' },
         messages: {
