@@ -15,11 +15,13 @@ node_modules
 **/tmp
 **/docs-dist
 
+# turbo
 .turbo
 
-.cspellcache
-
+# pnpm 锁文件
 pnpm-lock.yaml
+
+# yarn 锁文件
 yarn.lock
 
 node_modules/
