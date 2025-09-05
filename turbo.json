@@ -19,6 +19,12 @@
         },
         "release": {
             "dependsOn": ["^build"]
+        },
+        "build-storybook": {
+            "dependsOn": ["^build"]
+        },
+        "publish": {
+            "dependsOn": ["^build"]
         }
     }
 }

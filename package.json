@@ -10,7 +10,10 @@
         "stylelint": "stylelint \"{packages,apps}/**/*.{css,scss,sass}\" --fix --cache",
         "build": "turbo build",
         "dev": "turbo dev --parallel",
-        "storybook": "turbo storybook"
+        "storybook": "turbo storybook",
+        "build-storybook": "turbo build-storybook",
+        "release": "turbo release",
+        "publish": "turbo publish"
     },
     "config": {
         "commitizen": {

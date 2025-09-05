@@ -38,7 +38,7 @@ jobs:
         run: pnpm build
 
       - name: Build Storybook
-        run: pnpm storybook
+        run: pnpm build-storybook
 
       - name: Upload Storybook artifact
         uses: actions/upload-pages-artifact@v3
