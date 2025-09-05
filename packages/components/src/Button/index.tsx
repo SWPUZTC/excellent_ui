@@ -1,8 +1,8 @@
 import ButtonProps from './type'
-import styles from './index.module.scss'
+import styles from './index.module.sass'
 
 const Button = (props: ButtonProps) => {
-    const { children, style, className, onClick, disabled, icon, htmlType } = props;
+    const { children, style, className, onClick, disabled, icon, htmlType } = props
     return (
         <button type={htmlType} className={className ? styles[className] : ''} style={style} onClick={onClick} disabled={disabled}>
             {icon}
@@ -15,7 +15,7 @@ Button.defaultProps = {
     type: 'default',
     size: 'medium',
     status: 'default',
-    htmlType: 'button',
+    htmlType: 'button'
 }
 
-export default Button;
+export default Button
