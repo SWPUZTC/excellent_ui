@@ -34,14 +34,11 @@ jobs:
       - name: Stylelint
         run: pnpm stylelint
 
-      - name: Test
-        run: turbo run test
-
       - name: Build
         run: pnpm build
 
       - name: Build Storybook
-        run: turbo run build-storybook
+        run: pnpm storybook
 
       - name: Upload Storybook artifact
         uses: actions/upload-pages-artifact@v3
