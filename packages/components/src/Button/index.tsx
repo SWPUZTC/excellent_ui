@@ -1,5 +1,5 @@
 import ButtonProps from './type'
-import styles from './index.module.sass'
+import styles from './index.module.scss'
 
 const Button = (props: ButtonProps) => {
     const { children, style, className, onClick, disabled, icon, htmlType } = props
