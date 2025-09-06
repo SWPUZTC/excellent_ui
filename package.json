@@ -13,7 +13,11 @@
         "storybook": "turbo storybook",
         "build-storybook": "turbo build-storybook",
         "release": "turbo release",
-        "publish": "turbo publish"
+        "publish": "turbo publish",
+        "pub:changeset": "pnpm changeset",
+        "pub:version": "pnpm changeset version",
+        "pub:release": "pnpm changeset publish",
+        "ci:publish": "pnpm publish -r --access public"
     },
     "config": {
         "commitizen": {
@@ -23,6 +27,7 @@
     "author": "hsl",
     "license": "ISC",
     "devDependencies": {
+        "@changesets/cli": "^2.29.6",
         "@commitlint/config-conventional": "^19.8.1",
         "@eslint/js": "^9.34.0",
         "@types/react": "^19.1.12",
