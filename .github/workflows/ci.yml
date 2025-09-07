@@ -45,6 +45,12 @@ jobs:
         with:
           path: ./apps/docs/storybook-static
 
+      - name: Upload Storybook artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./apps/docs/storybook-static
+          name: storybook-artifact
+
   deploy-gh-pages:
     needs: build-and-test
     runs-on: ubuntu-latest
@@ -60,3 +66,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: storybook-artifact
