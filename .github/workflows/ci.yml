@@ -40,16 +40,32 @@ jobs:
       - name: Build Storybook
         run: pnpm build-storybook
 
-      - name: Upload Storybook artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./apps/docs/storybook-static
+      - name: List files to debug
+        run: ls -lR ./apps/docs/storybook-static
 
       - name: Upload Storybook artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./apps/docs/storybook-static
           name: storybook-artifact
+
+      # 在 Install dependencies 步骤前添加缓存
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      # 可以考虑添加构建产物缓存
+      - name: Cache build artifacts
+        uses: actions/cache@v4
+        with:
+          path: |
+            **/dist
+            **/storybook-static
+          key: ${{ runner.os }}-build-${{ github.sha }}
 
   deploy-gh-pages:
     needs: build-and-test
