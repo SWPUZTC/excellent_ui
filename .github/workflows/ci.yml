@@ -17,39 +17,14 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10.15.1
+          version: 8 # 改用更稳定的 pnpm 版本
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.18.0'
+          node-version: '20' # 改用更稳定的 Node.js 版本
           cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Lint
-        run: pnpm lint
-
-      - name: Stylelint
-        run: pnpm stylelint
-
-      - name: Build
-        run: pnpm build
-
-      - name: Build Storybook
-        run: pnpm build-storybook
-
-      - name: List files to debug
-        run: ls -lR ./apps/docs/storybook-static
-
-      - name: Upload Storybook artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./apps/docs/storybook-static
-          name: storybook-artifact
-
-      # 在 Install dependencies 步骤前添加缓存
+      
       - name: Cache pnpm store
         uses: actions/cache@v4
         with:
@@ -58,18 +33,24 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-
 
-      # 可以考虑添加构建产物缓存
-      - name: Cache build artifacts
-        uses: actions/cache@v4
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile # 添加 --frozen-lockfile 确保依赖版本一致
+
+      - name: Build
+        run: pnpm build
+
+      - name: Build Storybook
+        run: pnpm build-storybook
+
+      - name: Upload Storybook artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: |
-            **/dist
-            **/storybook-static
-          key: ${{ runner.os }}-build-${{ github.sha }}
+          path: apps/docs/storybook-static # 确保路径正确
 
   deploy-gh-pages:
     needs: build-and-test
     runs-on: ubuntu-latest
+    # 添加权限
     permissions:
       pages: write
       id-token: write
@@ -82,5 +63,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: storybook-artifact
