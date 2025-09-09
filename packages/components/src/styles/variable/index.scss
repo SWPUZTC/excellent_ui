@@ -1,0 +1,51 @@
+// 基础颜色
+$--primary-color: rgb(22, 93, 255);
+$--success-color: rgb(0, 180, 42);
+$--danger-color: rgb(255, 69, 58);
+$--warning-color: rgb(255, 165, 0);
+$--link-color: rgb(22, 93, 255);
+$--border-color: rgb(201, 205, 212);
+$--color-fill: rgb(247, 248, 250);
+$--color-text: rgb(29, 33, 41);
+$--background-color: #ffffff;
+$--background-color-dark: #1a1a1a;
+
+// 字体大小
+$--font-size-xs: 0.75rem;
+$--font-size-sm: 0.875rem;
+$--font-size-md: 1rem;
+$--font-size-lg: 1.125rem;
+$--font-size-xl: 1.25rem;
+
+// 字体权重
+$--font-weight-thin: 100;
+$--font-weight-extralight: 200;
+$--font-weight-light: 300;
+$--font-weight-normal: 400;
+$--font-weight-medium: 500;
+$--font-weight-semibold: 600;
+$--font-weight-bold: 700;
+$--font-weight-extrabold: 800;
+$--font-weight-black: 900;
+
+// 边框圆角
+$--border-radius-none: 0;
+$--border-radius-sm: 2px;
+$--border-radius-md: 4px;
+$--border-radius-lg: 8px;
+$--border-radius-full: 50%;
+
+// 阴影
+$--shadow-none: none;
+$--shadow-xs:  0 1px 2px 0 rgb(0 0 0 / 0.05);
+$--shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+$--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+$--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+// 边框类型
+$--border-type-solid: solid;
+$--border-type-dashed: dashed;
+$--border-type-dotted: dotted;
+
+
+

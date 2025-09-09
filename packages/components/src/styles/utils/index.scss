@@ -1,0 +1,43 @@
+@use "sass:color";
+
+@function generate-color($base-color, $level) {
+  @if $level < 1 or $level > 6 {
+    @error "Level must be between 1 and 6.";
+  }
+
+  // 计算混合比例
+  $mix-percentage: $level * 10%;
+  @return color.mix(white, $base-color, $mix-percentage);
+}
+
+@function generate-color-dark($base-color, $level) {
+  @if $level < 1 or $level > 6 {
+    @error "Level must be between 1 and 6.";
+  }
+
+  // 计算混合比例
+  $mix-percentage: $level * 10%;
+  @return color.mix($base-color, black, $mix-percentage);
+}
+
+// 字体大小
+@function generate-font-size($base-size, $level) {
+  @if $level < 2 or $level > 10 {
+    @error "Level must be between 2 and 10.";
+  }
+
+  $font-size: $base-size + ($level - 1) * 0.25rem;
+  @return $font-size;
+}
+
+@function generate-line-height($base-size, $level) {
+  @if $level < 1 or $level > 10 {
+    @error "Level must be between 1 and 10.";
+  }
+
+  @if $level > 5 {
+    @return $base-size;
+  }
+  $line-height: $base-size * 1.5;
+  @return $line-height;
+}

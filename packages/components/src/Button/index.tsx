@@ -1,21 +1,27 @@
 import ButtonProps from './type'
-import styles from './index.module.scss'
+//import { size } from '@/constant'
+
+// const initialProps: ButtonProps = {
+//     type: 'default',
+//     borderType: 'solid',
+//     size: 'medium',
+//     status: 'default',
+//     htmlType: 'button'
+// }
 
 const Button = (props: ButtonProps) => {
-    const { children, style, className, onClick, disabled, icon, htmlType } = props
+    const { children, style, className, disabled, icon, htmlType } = props;
+
     return (
-        <button type={htmlType} className={className ? styles[className] : ''} style={style} onClick={onClick} disabled={disabled}>
+        <button 
+        type={htmlType} 
+        className={className ? className : 'excellent-ui-button'} 
+        style={style}
+        disabled={disabled}>
             {icon}
             {children}
         </button>
     )
-}
-
-Button.defaultProps = {
-    type: 'default',
-    size: 'medium',
-    status: 'default',
-    htmlType: 'button'
 }
 
 export default Button

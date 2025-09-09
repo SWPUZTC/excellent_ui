@@ -1,3 +1,23 @@
-.active {
-    background-color: #000;
+.excellent-ui-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.excellent-ui-button:hover {
+    opacity: 0.8;
+    
+}
+
+.excellent-ui-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

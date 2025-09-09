@@ -1,5 +1,4 @@
 import { defineConfig } from 'tsup'
-import esbuildPluginCssModules from 'esbuild-plugin-css-modules'
 import { sassPlugin } from 'esbuild-sass-plugin'
 
 export default defineConfig({
@@ -11,5 +10,7 @@ export default defineConfig({
     sourcemap: false,
     clean: true,
     minify: true,
-    esbuildPlugins: [esbuildPluginCssModules(), sassPlugin()]
+    esbuildPlugins: [
+        sassPlugin()    
+    ],
 })

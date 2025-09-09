@@ -1,0 +1,29 @@
+@use "sass:color";
+
+:root {
+  // Light Theme
+  --primary-color: rgb(22, 93, 255);
+  --success-color: rgb(0, 180, 42);
+  --danger-color: rgb(255, 69, 58);
+  --warning-color: rgb(255, 165, 0);
+  --link-color: rgb(22, 93, 255);
+  --border-color: rgb(201, 205, 212);
+  --color-fill: rgb(247, 248, 250);
+  --color-text: rgb(29, 33, 41);
+  --background-color: #ffffff;
+  --background-color-dark: #1a1a1a;
+}
+
+[data-theme='dark'] {
+  // Dark Theme
+  --primary-color: #{color.adjust(rgb(22, 93, 255), $lightness: 20%)};
+  --success-color: #{color.adjust(rgb(0, 180, 42), $lightness: 20%)};
+  --danger-color: #{color.adjust(rgb(255, 69, 58), $lightness: -10%)};
+  --warning-color: #{color.adjust(rgb(255, 165, 0), $lightness: 10%)};
+  --link-color: #{color.adjust(rgb(22, 93, 255), $lightness: 20%)};
+  --border-color: #{color.adjust(rgb(201, 205, 212), $lightness: -50%)};
+  --color-fill: #{color.adjust(rgb(247, 248, 250), $lightness: -70%)};
+  --color-text: #{color.adjust(rgb(29, 33, 41), $lightness: 60%)};
+  --background-color: #1a1a1a;
+  --background-color-dark: #0a0a0a;
+}
