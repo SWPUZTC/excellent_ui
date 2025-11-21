@@ -14,7 +14,6 @@ export default [
       'scripts/**',
       '**/*/.d.ts',
       '**/*.{json,json5,css,scss,md}',
-      '.dumirc.{js,jsx,ts,tsx}',
     ],
   },
   pluginJs.configs.recommended,

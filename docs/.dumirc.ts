@@ -1,15 +1,3 @@
-// import { defineConfig } from 'dumi';
-
-// export default defineConfig({
-//   themeConfig: {
-//     name: 'Excellent UI',
-//     nav: [
-//       { title: '指南', link: '/guide' },
-//       { title: '组件', link: '/components/button' }, // 指向组件文档
-//     ],
-//   },
-// });
-
 import { defineConfig } from 'dumi';
 import path from 'path';
 
