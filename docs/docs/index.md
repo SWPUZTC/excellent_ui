@@ -7,7 +7,7 @@ hero:
         - text: 快速开始
           link: /guide
         - text: 组件文档
-          link: /components
+          link: /components/button
 features:
     - title: React 18+
       emoji: ⚛️
