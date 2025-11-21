@@ -1,0 +1,25 @@
+{
+    "name": "@excellent-ui/themes",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.css",
+    "style": "dist/index.css",
+    "scss": "index.scss",
+    "type": "module",
+    "exports": {
+        ".": "./dist/index.css",
+        "./index.scss": "./index.scss"
+    },
+    "scripts": {
+        "build": "npx sass index.scss dist/index.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@arco-design/color": "^0.4.0"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1"
+    }
+}

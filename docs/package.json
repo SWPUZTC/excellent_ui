@@ -1,0 +1,23 @@
+{
+    "name": "@excellent-ui/docs",
+    "version": "1.0.0",
+    "description": "A static site based on dumi",
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "dumi dev",
+        "build": "dumi build",
+        "preview": "dumi preview"
+    },
+    "authors": [],
+    "license": "MIT",
+    "dependencies": {
+        "@excellent-ui/components": "workspace:*",
+        "@excellent-ui/themes": "workspace:*",
+        "dumi": "^2.0.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "dumi-theme-antd-style": "^0.31.1"
+    }
+}

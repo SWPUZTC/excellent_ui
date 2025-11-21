@@ -1,0 +1,113 @@
+.ex-typography {
+    word-break: break-all;
+    white-space: normal;
+    color: var(--color-text-1);
+    font-size: var(--font-size-base);
+
+    & ul, & ol {
+        margin: 0;
+        padding: 0;
+    }
+
+    & ul {
+        list-style: circle;
+    }
+
+    & ol li, & ul li {
+        margin-left: 20px;
+    }
+
+    &-blockquote {
+        margin: 1em;
+        border-left: 2px solid var(--color-border-4);
+        padding-left: var(--gap-md);
+        background-color: var(--backgroundcolor-light);
+    }
+
+    &-paragraph {
+        margin-bottom: 1em;
+    }
+
+    &-code > * { 
+        padding: 2px 8px;
+        margin: 0 2px;
+        font-size: 85%;
+        border-radius: var(--border-radius-xs);
+        background-color: var(--color-fill-2);
+        color: var(--color-text-2);
+    }
+
+    $line-heights: 1.23, 1.25, 1.29, 1.33, 1.38, 1.5;
+
+    @for $i from 1 through 6 {
+        &-heading-#{$i}
+
+ {
+            font-weight: var(--font-weight-500);
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            font-size: var(--font-size-title-#{$i});
+            line-height: nth($line-heights, $i);
+        }
+        &-code &-heading-#{$i}
+
+ {
+            font-size: calc(var(--font-size-title-#{$i}) * 0.85);
+        }
+    }
+
+    &-copy-icon {
+        vertical-align: middle;
+        margin-left: var(--gap-sm);
+        font-size: inherit;
+        cursor: pointer;
+        line-height: 1;
+
+        &:hover {
+            & > svg {
+                stroke: var(--primary-6);
+            }
+        }
+    }
+
+    &-bold {
+        font-weight: var(--font-weight-600);
+    }
+
+    &-underline {
+        text-decoration: underline;
+    }
+
+    &-delete {
+        text-decoration: line-through;
+    }
+
+    &-mark {
+        background-color: rgb(252 242 107);
+    }
+
+    &-primary {
+        color: var(--primary-6);
+    }
+
+    &-success {
+        color: var(--success-6);
+    }
+
+    &-danger {
+        color: var(--danger-6);
+    }
+
+    &-warning {
+        color: var(--warning-6);
+    }
+
+    &-secondary {
+        color: var(--color-text-3);
+    }
+
+    &-disabled {
+        color: var(--color-text-4);
+        cursor: not-allowed;
+    }
+}

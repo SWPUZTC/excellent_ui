@@ -1,0 +1,6 @@
+node_modules
+dist
+.trae
+.dumi
+__snapshots__
+.DS_Store

@@ -1,0 +1,188 @@
+@use './colors.scss';
+
+:root {
+    // 主题色
+    --primary-1: #{$color-primary-light-1}; // 浅色/白底悬浮
+    --primary-2: #{$color-primary-light-2}; // 文案禁用
+    --primary-3: #{$color-primary-light-3}; // 一般禁用
+    --primary-4: #{$color-primary-light-4}; // 特殊场景
+    --primary-5: #{$color-primary-light-5}; // 悬浮
+    --primary-6: #{$color-primary-light-6}; // 常规
+    --primary-7: #{$color-primary-light-7}; // 点击
+
+    --link-1: #{$color-link-light-1}; // 浅色/白底悬浮
+    --link-2: #{$color-link-light-2}; // 文案禁用
+    --link-3: #{$color-link-light-3}; // 一般禁用
+    --link-4: #{$color-link-light-4}; // 特殊场景
+    --link-5: #{$color-link-light-5}; // 悬浮
+    --link-6: #{$color-link-light-6}; // 常规
+    --link-7: #{$color-link-light-7}; // 点击
+
+    // 警告色
+    --warning-1: #{$color-warning-light-1}; // 浅色/白底悬浮
+    --warning-2: #{$color-warning-light-2}; // 文案禁用
+    --warning-3: #{$color-warning-light-3}; // 一般禁用
+    --warning-4: #{$color-warning-light-4}; // 特殊场景
+    --warning-5: #{$color-warning-light-5}; // 悬浮
+    --warning-6: #{$color-warning-light-6}; // 常规
+    --warning-7: #{$color-warning-light-7}; // 点击
+
+    // 危险色
+    --danger-1: #{$color-danger-light-1}; // 浅色/白底悬浮
+    --danger-2: #{$color-danger-light-2}; // 文案禁用
+    --danger-3: #{$color-danger-light-3}; // 一般禁用
+    --danger-4: #{$color-danger-light-4}; // 特殊场景
+    --danger-5: #{$color-danger-light-5}; // 悬浮
+    --danger-6: #{$color-danger-light-6}; // 常规
+    --danger-7: #{$color-danger-light-7}; // 点击
+
+    // 成功色
+    --success-1: #{$color-success-light-1}; // 浅色/白底悬浮
+    --success-2: #{$color-success-light-2}; // 文案禁用
+    --success-3: #{$color-success-light-3}; // 一般禁用
+    --success-4: #{$color-success-light-4}; // 特殊场景
+    --success-5: #{$color-success-light-5}; // 悬浮
+    --success-6: #{$color-success-light-6}; // 常规
+    --success-7: #{$color-success-light-7}; // 点击
+
+    // 文本色
+    --color-text-1: #{$color-text-light-10}; // 强调/正文标题
+    --color-text-2: #{$color-text-light-8}; // 次强调/正文标题
+    --color-text-3: #{$color-text-light-6}; // 次要信息
+    --color-text-4: #{$color-text-light-4}; // 置灰信息
+
+    // 填充色
+    --color-fill-1: #{$color-fill-light-1}; // 浅色/白底悬浮
+    --color-fill-2: #{$color-fill-light-2}; // 文案禁用
+    --color-fill-3: #{$color-fill-light-3}; // 一般禁用
+    --color-fill-4: #{$color-fill-light-4}; // 特殊场景
+
+    // 边框颜色
+    --color-border-1: #{$color-fill-light-2}; // 浅色/白底悬浮
+    --color-border-2: #{$color-fill-light-3}; // 文案禁用
+    --color-border-3: #{$color-fill-light-4}; // 一般禁用
+    --color-border-4: #{$color-fill-light-6};
+
+    --backgroundcolor-light: #fff // 浅色主题背景;
+    --backgroundcolor-dark: #000
+
+    $font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+    @each $weight in $font-weights {
+        --font-weight-#{$weight}: #{$weight};
+    }
+
+    $sizes: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+    @each $size in $sizes {
+        --size-#{$size}: #{$size * 4}px;
+    }
+
+    --size-mini: var(--size-6);
+    --size-small: var(--size-7);
+    --size-medium: var(--size-8);
+    --size-large: var(--size-9);
+
+    $borders: 0, 1, 2, 3;
+
+    @each $width in $borders {
+        --border-#{$width}: #{$width}px;
+    }
+
+    --border-radius-none: 0px;
+    --border-radius-xs: 2px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-full: 50%;
+    --shadow-sm: 0 -2px 5px rgb(0 0 0 / 10%);
+    --shadow-md: 0 0 10px rgb(0 0 0 / 10%);
+    --shadow-lg: 0 0 20px rgb(0 0 0 / 10%);
+    --font-size-base: 14px;
+    --font-size-sm: 12px;
+    --font-size-md: 13px;
+    --font-size-lg: 16px;
+    --font-size-title-1: 36px;
+    --font-size-title-2: 32px;
+    --font-size-title-3: 28px;
+    --font-size-title-4: 24px;
+    --font-size-title-5: 20px;
+    --font-size-title-6: 16px;
+    --gap-xs: 4px;
+    --gap-sm: 6px;
+    --gap-md: 8px;
+    --gap-lg: 12px;
+    --gap-xl: 16px;
+}
+
+[data-theme='dark'] {
+    // 主题色
+    --primary-1: #{$color-primary-dark-1};
+
+    --primary-2: #{$color-primary-dark-2};
+    --primary-3: #{$color-primary-dark-3};
+    --primary-4: #{$color-primary-dark-4};
+    --primary-5: #{$color-primary-dark-5};
+    --primary-6: #{$color-primary-dark-6};
+    --primary-7: #{$color-primary-dark-7};
+    --link-1: #{$color-link-dark-1};
+    --link-2: #{$color-link-dark-2};
+    --link-3: #{$color-link-dark-3};
+    --link-4: #{$color-link-dark-4};
+    --link-5: #{$color-link-dark-5};
+    --link-6: #{$color-link-dark-6};
+    --link-7: #{$color-link-dark-7};
+
+    // 警告色
+    --warning-1: #{$color-warning-dark-1};
+
+    --warning-2: #{$color-warning-dark-2};
+    --warning-3: #{$color-warning-dark-3};
+    --warning-4: #{$color-warning-dark-4};
+    --warning-5: #{$color-warning-dark-5};
+    --warning-6: #{$color-warning-dark-6};
+    --warning-7: #{$color-warning-dark-7};
+
+    // 危险色
+    --danger-1: #{$color-danger-dark-1};
+
+    --danger-2: #{$color-danger-dark-2};
+    --danger-3: #{$color-danger-dark-3};
+    --danger-4: #{$color-danger-dark-4};
+    --danger-5: #{$color-danger-dark-5};
+    --danger-6: #{$color-danger-dark-6};
+    --danger-7: #{$color-danger-dark-7};
+
+    // 成功色
+    --success-1: #{$color-success-dark-1};
+
+    --success-2: #{$color-success-dark-2};
+    --success-3: #{$color-success-dark-3};
+    --success-4: #{$color-success-dark-4};
+    --success-5: #{$color-success-dark-5};
+    --success-6: #{$color-success-dark-6};
+    --success-7: #{$color-success-dark-7};
+
+    // 文本色
+    --color-text-1: #{$color-text-dark-10};
+
+    --color-text-2: #{$color-text-dark-8};
+    --color-text-3: #{$color-text-dark-6};
+    --color-text-4: #{$color-text-dark-4};
+
+    // 填充色
+    --color-fill-1: #{$color-fill-dark-1};
+
+    --color-fill-2: #{$color-fill-dark-2};
+    --color-fill-3: #{$color-fill-dark-3};
+    --color-fill-4: #{$color-fill-dark-4};
+
+    // 边框颜色
+    --color-border-1: #{$color-fill-dark-2};
+
+    --color-border-2: #{$color-fill-dark-3};
+    --color-border-3: #{$color-fill-dark-4};
+    --color-border-4: #{$color-fill-dark-6};
+    --backgroundcolor-dark: #fff;
+    --backgroundcolor-light: #000;
+}
