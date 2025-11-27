@@ -1,0 +1,103 @@
+.ex-card {
+    position: relative;
+    background-color: var(--backgroundcolor-light);
+    transition: box-shadow 0.2s linear;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid var(--color-border-3);
+
+        &-title {
+            flex: 1;
+            font-weight: var(--font-weight-500);
+            color: var(--color-text-1);
+            font-size: var(--font-size-base);
+        }
+
+        &-extra {
+            color: var(--primary-6);
+        }
+
+        &-extra,
+        &-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    &-bordered {
+        border: 1px solid var(--color-border-3);
+        border-radius: var(--border-radius-xs);
+    }
+
+    &-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        &::before {
+            content: '';
+            visibility: hidden;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-bordered &-cover {
+        border-radius: var(--border-radius-xs) var(--border-radius-xs) 0 0;
+        object-fit: cover;
+    }
+
+    &-cover {
+        overflow: hidden;
+    }
+
+    &-default &-header {
+        height: 46px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &-small &-header {
+        height: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &-hoverable {
+        &:hover {
+            box-shadow: var(--shadow-md);
+        }
+    }
+
+    &-body {
+        padding: 16px;
+        color: var(--color-text-2);
+    }
+
+    &-small &-body {
+        padding: 12px 16px;
+    }
+}
+
+.card-custom-hover-style {
+    transition-property: all;
+}
+
+.card-custom-hover-style:hover {
+    transform: translateY(-4px);
+}

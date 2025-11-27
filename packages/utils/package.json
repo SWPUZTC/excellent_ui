@@ -2,19 +2,19 @@
     "name": "@excellent-ui/utils",
     "version": "1.0.0",
     "description": "",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
-            "import": "./dist/index.js",
+            "import": "./dist/index.mjs",
             "require": "./dist/index.js"
         }
     },
     "scripts": {
-        "build": "tsc",
-        "dev": "tsc --watch"
+        "build": "tsup",
+        "dev": "tsup --watch"
     },
     "peerDependencies": {
         "react": ">=18",
@@ -23,5 +23,8 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "packageManager": "pnpm@10.14.0"
+    "packageManager": "pnpm@10.14.0",
+    "devDependencies": {
+        "tsup": "^8.5.1"
+    }
 }

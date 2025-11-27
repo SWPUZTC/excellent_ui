@@ -10,7 +10,7 @@
         "stylelint": "stylelint \"{packages, docs}/**/*.{css,scss,sass}\" --fix --cache",
         "prepare": "husky",
         "commit": "git-cz",
-        "doc:dev": "cd docs && dumi dev",
+        "doc:dev": "cd docs && pnpm dev",
         "test": "cd packages/components && pnpm test",
         "build": "cd packages/components && pnpm build"
     },

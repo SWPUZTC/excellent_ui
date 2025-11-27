@@ -1,0 +1,39 @@
+.ex-space {
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-horizontal {
+        flex-direction: row;
+        &-center {
+            align-items: center;
+        }
+        &-start {
+            align-items: flex-start;
+        }
+        &-baseline {
+            align-items: baseline;
+        }
+        &-end {
+            align-items: flex-end;
+        }
+    }
+    &-vertical {
+        flex-direction: column;
+        &-center {
+            align-items: center;
+        }
+        &-start {
+            align-items: flex-start;
+        }
+        &-baseline {
+            align-items: baseline;
+        }
+        &-end {
+            align-items: flex-end;
+        }
+    }
+}

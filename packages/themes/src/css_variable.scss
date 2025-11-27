@@ -1,4 +1,4 @@
-@import url('./colors.scss');
+@import './colors.scss';
 
 :root {
     // 主题色
@@ -63,9 +63,8 @@
     --color-border-3: #{$color-fill-light-4}; // 一般禁用
     --color-border-4: #{$color-fill-light-6};
 
-    --backgroundcolor-light: #fff // 浅色主题背景;
-    --backgroundcolor-dark: #000
-
+    --backgroundcolor-light: #fff;
+    --backgroundcolor-dark: #000;
     $font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
     @each $weight in $font-weights {
@@ -113,6 +112,9 @@
     --gap-md: 8px;
     --gap-lg: 12px;
     --gap-xl: 16px;
+
+    // z-index管理
+    --z-index-affix: 999;
 }
 
 [data-theme='dark'] {

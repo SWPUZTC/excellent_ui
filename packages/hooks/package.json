@@ -2,11 +2,24 @@
     "name": "@excellent-ui/hooks",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "tsup",
+        "dev": "tsup --watch"
+    },
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18"
     },
     "keywords": [],
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "@excellent-ui/utils": "workspace:*"
+    },
+    "devDependencies": {
+        "tsup": "^8.5.1"
+    }
 }

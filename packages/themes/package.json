@@ -11,7 +11,8 @@
         "./index.scss": "./index.scss"
     },
     "scripts": {
-        "build": "npx sass index.scss dist/index.css"
+        "build": "npx sass index.scss dist/index.css",
+        "dev": "npx sass --watch index.scss dist/index.css"
     },
     "keywords": [],
     "author": "",

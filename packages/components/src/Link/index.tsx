@@ -1,33 +1,24 @@
-import { LinkProps } from "./type";
+import { LinkProps } from './type'
 import './index.scss'
-import classNames from "classnames";
+import classNames from 'classnames'
 
 const Link = (props: LinkProps) => {
-    const {
-        disabled,
-        hoverable = true,
-        status = 'default',
-        className,
-        icon,
-        style,
-        children,
-        ...rest
-    } = props;
+    const { disabled, hoverable = true, status = 'default', className, icon, style, children, ...rest } = props
 
     const linkClassName = classNames(
         'ex-link',
         `ex-link-${status}`,
         disabled && 'ex-link-disabled',
         hoverable && 'ex-link-hoverable',
-        className,
-    );
+        className
+    )
 
     return (
         <a className={linkClassName} style={style} {...rest}>
-            <span className="ex-link-icon">{icon}</span>
+            {icon && <span className="ex-link-icon">{icon}</span>}
             {children}
         </a>
     )
 }
 
-export default Link;
+export default Link
